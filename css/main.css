@@ -378,8 +378,6 @@ footer {
   display: flex;
   justify-content: left;
   gap: 20px;
-  font-size: 18px;
-  line-height: 1.22px;
 }
 
 .mobile-menu__point {
@@ -387,7 +385,20 @@ footer {
 }
 
 .mobile-menu__link {
+  display: block;
+  font-size: 18px;
+  line-height: 1.22;
   color: var(--accent-text-color);
+}
+
+.mobile-menu__link--after::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 1px;
+  transform: rotate(90deg);
+  background-color: rgba(33, 33, 33, 0.2);
 }
 
 .mobile-button {
