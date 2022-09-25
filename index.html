@@ -23,7 +23,7 @@
                 <li class="navigation-list__item"><a href="#" class="navigation-list__link navigation-list__link--сurrent-secondary">Contacts</a></li>
             </ul>
         </nav>
-        <button class="header-button" type="button">
+        <button class="header-button" type="button" data-modal-open>
             <svg class="header-button__icon" width="40" height="40">
                 <use href="./images/icons.svg#icon-burger"></use>
             </svg>
@@ -46,28 +46,35 @@
                 </a>
             </li>
         </ul>
-        <div class="mobile-menu is-hidden">
+        <div class="mobile-menu is-hidden" data-modal>
             <div class="contanier mobile-menu__contanier">
                 <ul class="mobile-menu__list-pages">
                     <li class="mobile-menu__item"><a class="mobile-menu__page" href="./index.html">Studio</a></li>
                     <li class="mobile-menu__item"><a class="mobile-menu__page" href="./portfolio.html">Portfolio</a></li>
                     <li class="mobile-menu__item"><a class="mobile-menu__page" href="#">Contacts</a></li>
                  </ul>
-                <ul class="mobile-menu__contacts">
-                    <li class="mobile-menu__item">
-                        <a class="mobile-menu__tel" href="tel:+1212724150" class="contact">+1 212-772-4150</a>
-                    </li>
-                    <li class="mobile-menu__item">
-                        <a class="mobile-menu__mail" href="mailto:info@example.com" class="contact">info@example.com</a>
-                    </li>
-                </ul>
-                <button class="mobile-button" type="button">
+                <div class="main-info">
+                    <ul class="mobile-menu__contacts">
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__tel" href="tel:+1212724150" class="contact">+1 212-772-4150</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__mail" href="mailto:info@example.com" class="contact">info@example.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-menu__main-links">
+                        <li class="mobile-menu__point"><a class="mobile-menu__link" href="#">Instagram</a></li>
+                        <li class="mobile-menu__point"><a class="mobile-menu__link" href="#">Twitter</a></li>
+                        <li class="mobile-menu__point"><a class="mobile-menu__link" href="#">Facebook</a></li>
+                        <li class="mobile-menu__point"><a class="mobile-menu__link" href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <button class="mobile-button" type="button" data-modal-close>
                     <svg width="40" height="40">
                         <use href="./images/icons.svg#icon-close"></use>
                     </svg>
                 </button>
             </div>
-            
         </div>
     </div>
 </header>
@@ -457,5 +464,6 @@
     </div>
 </footer>
 <script src="./js/modal.js"></script> -->
+<script src="./js/mobile_window.js" ></script>
 </body>
 </html>
