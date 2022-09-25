@@ -1,0 +1,135 @@
+
+.footer-page {
+    display: flex;
+    align-items: baseline;
+}
+
+.contact-info {
+    margin-right: 70px;
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-right: 0;
+
+        color: var(--secondary-text-color);
+    }
+}
+
+.address {
+    width: 233px;
+
+    &__list {
+        font-style: normal;
+        font-size: 14px;
+        line-height: 1.71;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+
+    &__text {
+        display: inline-block;
+        color: var(--secondary-text-color);
+    }
+
+    &__contact {
+        padding: 0;
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+
+.main-icons {
+    &__text {
+        margin-bottom: 20px;
+
+        color: var(--secondary-text-color);
+        @include font (700, 14px, 1.14);
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 10px;
+    }
+
+    &__link {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        justify-content: center;
+        align-items: center;
+        fill: var(--secondary-text-color);
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+
+        transition: background-color 250ms var(--timing);
+
+        &:hover,
+        &:focus {
+            background-color: var(--accent-bg-blue-color);
+        }
+
+    }
+}
+
+
+.footer-form {
+    margin-left: auto;
+
+    &__text {
+        margin-bottom: 20px;
+
+        color: var(--secondary-text-color);
+        @include font (700, 14px, 1.14);
+        text-align: left;
+        text-transform: uppercase;
+    }
+}
+
+.shape {
+    display: flex;
+    justify-content: center;
+
+    &__point {
+        margin-right: 12px;
+    }
+
+    &__email {
+        padding: 10px 16px;
+        width: 358px;
+        height: 50px;
+
+        color: var(--secondary-text-color);
+        background-color: var(--accent-bg-color);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+            line-height: 1.25;
+        }
+    }
+
+    &__button {
+        display: flex;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+
+        &__text {
+            margin-right: 30px;
+
+            color: var(--secondary-text-color);
+        }
+    }
+
+}
+
+

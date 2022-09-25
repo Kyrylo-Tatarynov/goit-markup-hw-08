@@ -1,0 +1,42 @@
+.benefits {
+    display: flex;
+
+    &__item {
+        width: 270px;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+    &__icon {
+        display: flex;
+        margin-bottom: 30px;
+        height: 120px;
+        justify-content: center;
+        align-items: center;
+
+        background-color: var(--secondary-bg-color);
+        border-radius: 4px;
+    }
+
+    &__subtitle {
+        margin-bottom: 9px;
+
+        color: var(--tittle-text-color);
+        @include font (700, 14px, 1.14);
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+}
+
+
+
+
+
+
+
+

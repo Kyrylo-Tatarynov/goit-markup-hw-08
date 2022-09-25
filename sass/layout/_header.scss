@@ -1,0 +1,242 @@
+.page-header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo {
+    color: var(--tittle-text-color);
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    line-height: 1.19;
+
+    &--blue {
+        color: var(--accent-text-color)
+    }
+}
+
+.navigation-list {
+    display: none;
+}
+
+.header-contacts {
+    display: none;
+}
+
+.header-button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    line-height: 0;
+}
+
+// -------------------------------------
+
+
+.mobile-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    @include font(500, 40px, 1.17);
+    letter-spacing: 0.02em;
+    
+    color: var(--tittle-text-color);
+    background-color: var(--main-bg-color);
+}
+
+.mobile-menu__contanier {
+    position: relative;
+    padding-left: 25px;
+    padding-top: 48px;
+    // padding-bottom: 48px;
+}
+
+.mobile-menu__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mobile-menu__page {
+    color: var(--tittle-text-color);
+}
+
+.margin {
+    margin-top: auto;
+}
+
+.mobile-menu__contacts {
+    margin-top: auto;
+    margin-bottom: 64px;
+}
+
+.mobile-menu__tel {
+    font-size: 34px;
+    color: var(--tittle-text-color);
+}
+
+.mobile-menu__mail {
+    font-size: 24px;
+    line-height: 1.16;
+    color: var(--main-text-color);
+}
+
+.mobile-menu__main-links {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+
+.mobile-menu__point {
+    position: relative;
+}
+.mobile-menu__link {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1.22px;
+    color: var(--accent-text-color)
+}
+.mobile-menu__link::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 22px;
+    height: 1px;
+
+    transform: rotate(90deg);
+
+    background-color: black;
+}
+
+.mobile-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    line-height: 0;
+}
+// .page-header {
+//     border-bottom: 1px solid #ECECEC;
+// }
+
+
+
+
+// .navigation {
+//     display: flex;
+//     align-items: center;
+
+//     &__logo {
+//         margin-right: 97px;
+//     }
+// }
+
+
+// .navigation-list {
+//     display: flex;
+
+//     &__item {
+//         position: relative;
+
+//          &:not(:last-child) {
+//             margin-right: 50px;
+//         }
+//     }
+
+//     &__link {
+//         display: block;
+//         padding-top: 25px;
+//         padding-bottom: 25px;
+
+//         color: var(--tittle-text-color);
+//         @include font (500, 14px, 1.14);
+//         letter-spacing: 0.02em;
+
+//         transition: color 250ms var(--timing);
+
+//         &:focus,
+//         &:hover {
+//             color: var(--accent-text-color);
+//         }
+
+//         &--current {
+//             color: var(--accent-text-color);
+//         }
+
+//         &--current::after {
+//             position: absolute;
+//             content: "";
+//             bottom: -1px;
+//             right: 0;
+//             width: 100%;
+//             height: 4px;
+
+//             background: var(--accent-text-color);
+//             border-radius: 2px;
+//         }
+
+//         &--сurrent-secondary::after {
+//             position: absolute;
+//             content: "";
+//             bottom: -1px;
+//             right: 0;
+//             width: 100%;
+//             height: 4px;
+
+//             background: var(--accent-text-color);
+//             border-radius: 2px;
+//             transform: scale(0);
+
+//             transition: transform 250ms var(--timing);
+//         }
+
+//         &:hover::after,
+//         &:focus::after {
+//             transform: scale(1);
+//         }
+
+//     }
+   
+// }
+
+// .header-contacts {
+//     display: flex;
+
+//     &__mail {
+//         margin-right: 50px;
+//     }
+// }
+
+// .contact {
+//     display: flex;
+//     align-items: center;
+//     padding-top: 25px;
+//     padding-bottom: 25px;
+
+//     color: inherit;
+//     @include font (500, 14px, 1.14);
+//     letter-spacing: 0.02em;
+
+//     transition: color 250ms var(--timing);
+
+//     &:hover,
+//     &:focus {
+//         color: var(--accent-text-color);
+//     }
+
+//     &__icon {
+//         margin-right: 10px;
+//         fill: currentColor;
+//     }
+
+// }
