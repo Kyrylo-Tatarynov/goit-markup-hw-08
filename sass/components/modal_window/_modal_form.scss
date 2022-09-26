@@ -4,10 +4,11 @@
     color: var(--tittle-text-color);
 
     &__text {
-         margin-bottom: 12px;
+        margin-bottom: 12px;
     
         @include font (700, 20px, 1.15);
         letter-spacing: 0.03em;
+        text-align: center;
     }
 }
 
@@ -77,8 +78,8 @@
     margin-bottom: 30px;
 
     color: var(--main-text-color);
-    font-size: 13px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
 
     &__icon {
@@ -114,6 +115,12 @@
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .form-point {
+        font-size: 13px;
+        line-height: 1.71;
+    }
+}
 
 .main-form__button {
     display: block;
@@ -146,4 +153,3 @@
         fill: var(--accent-text-color);
     }
 }
-
