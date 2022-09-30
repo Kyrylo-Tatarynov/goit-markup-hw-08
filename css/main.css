@@ -128,8 +128,9 @@ footer {
     width: 100%;
     top: 0;
     left: 0;
-    visibility: visible;
-    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
     font-weight: 500;
     font-size: 40px;
     line-height: 1.17;
@@ -138,10 +139,10 @@ footer {
     background-color: var(--main-bg-color);
     transition: opacity 250ms var(--timing), visibility 250ms var(--timing);
   }
-  .mobile-menu.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
   .mobile-menu__contanier {
     position: relative;
@@ -357,7 +358,7 @@ footer {
   align-items: center;
   margin-bottom: 30px;
   color: var(--main-text-color);
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.16;
   letter-spacing: 0.03em;
 }
@@ -389,7 +390,7 @@ footer {
 }
 
 @media screen and (min-width: 1200px) {
-  .form-point {
+  .policy-agree {
     font-size: 13px;
     line-height: 1.71;
   }
@@ -634,12 +635,6 @@ footer {
 .benefits {
   display: flex;
 }
-.benefits__item {
-  width: 270px;
-}
-.benefits__item:not(:last-child) {
-  margin-right: 30px;
-}
 .benefits__icon {
   display: flex;
   margin-bottom: 30px;
@@ -662,6 +657,41 @@ footer {
   line-height: 1.71;
 }
 
+@media screen and (max-width: 767px) {
+  .benefits {
+    display: block;
+  }
+  .benefits__item {
+    width: 100%;
+  }
+  .benefits__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .benefits__subtitle {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .benefits {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .benefits__item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits {
+    flex-wrap: none;
+    gap: 0;
+  }
+  .benefits__item {
+    width: 270px;
+  }
+  .benefits__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
 .third-part {
   padding-top: 0;
 }
@@ -693,6 +723,11 @@ footer {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 1199px) {
+  .third-part {
+    display: none;
+  }
+}
 .fourth-part {
   background-color: var(--secondary-bg-color);
 }

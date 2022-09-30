@@ -23,7 +23,7 @@
                 <li class="navigation-list__item"><a href="#" class="navigation-list__link navigation-list__link--сurrent-secondary">Contacts</a></li>
             </ul>
         </nav>
-        <button class="header-button" type="button" data-modal-open>
+        <button class="header-button" type="button" data-menu-open>
             <svg class="header-button__icon" width="40" height="40">
                 <use href="./images/icons.svg#icon-burger"></use>
             </svg>
@@ -46,7 +46,7 @@
                 </a>
             </li>
         </ul>
-        <div class="mobile-menu is-hidden" data-modal>
+        <div class="mobile-menu" data-menu>
             <div class="contanier mobile-menu__contanier">
                 <ul class="mobile-menu__list-pages">
                     <li class="mobile-menu__item"><a class="mobile-menu__page mobile-menu__page--сurrent-secondary" href="./index.html">Studio</a></li>
@@ -69,7 +69,7 @@
                         <li class="mobile-menu__point"><a class="mobile-menu__link" href="#">LinkedIn</a></li>
                     </ul>
                 </div>
-                <button class="mobile-button" type="button" data-modal-close>
+                <button class="mobile-button" type="button" data-menu-close>
                     <svg width="40" height="40">
                         <use href="./images/icons.svg#icon-close"></use>
                     </svg>
@@ -84,7 +84,7 @@
             <h1 class="first-part__title">Effective solutions for your business</h1>
             <button type="button" class="button" data-modal-open>Request our service</button>
         </div>
-        <div class="backdrop" data-modal="">
+        <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <div class="form-block">
                     <p class="form-block__text">Leave your information and we'll call you back</p>
@@ -117,7 +117,7 @@
                             <svg class="policy-agree__icon" width="16" height="15">
                                 <use href="./images/icons.svg#icon-icon-check"></use>
                             </svg>
-                            <span>&nbsp;I agree with the newsletter and accept&nbsp;<span><a href="#" class="policy-agree__contract">the Terms and Conditions</a></span></span> 
+                            <span>&nbsp; &nbsp; I agree with the newsletter and accept&nbsp;<span><a href="#" class="policy-agree__contract">the Terms and Conditions</a></span></span> 
                         </label>
                         <button type="submit" class="button main-form__button">Send</button>
                     </form>
@@ -130,7 +130,7 @@
             </div>
         </div>
     </section>
-    <!-- <section class="second-part section">
+    <section class="second-part section">
        <div class="contanier">
             <h2 class="visually-hidden">Benefits</h2>
             <ul class="benefits">
@@ -175,8 +175,8 @@
                 </li>
             </ul>
        </div>
-    </section> -->
-    <!-- <section class="third-part section">
+    </section>
+    <section class="third-part section">
         <div class="capabilities contanier">
             <h2 class="capabilities__title title">What we do</h2>
             <ul class="capabilities__list">
@@ -194,8 +194,8 @@
                 </li>
             </ul>
         </div>
-    </section> -->
-    <!-- <section class="fourth-part section">
+    </section>
+    <section class="fourth-part section">
         <div class="employees contanier">
             <h2 class="employees__title title">Our team</h2>
             <ul class="wokers-list">
@@ -349,7 +349,7 @@
                 </li>
             </ul>
         </div>
-    </section> -->
+    </section>
     <!-- <section class="fifth-part section">
        <div class="customers contanier">
             <h2 class="customers__title title">Regular customers</h2>
@@ -463,6 +463,7 @@
          </div>
     </div>
 </footer> -->
+<script src="./js/menu.js"></script>
 <script src="./js/modal.js"></script>
 </body>
 </html>

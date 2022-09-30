@@ -4,8 +4,9 @@
         width: 100%;
         top: 0;
         left: 0;
-        visibility: visible;
-        z-index: 100;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
     
         @include font(500, 40px, 1.17);
         letter-spacing: 0.02em;
@@ -14,10 +15,10 @@
     
         transition: opacity 250ms var(--timing), visibility 250ms var(--timing);
     
-        &.is-hidden {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
+        &.is-open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
         }
     
         &__contanier {
