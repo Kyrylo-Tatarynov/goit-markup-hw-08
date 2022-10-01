@@ -10,6 +10,7 @@
     color: var(--tittle-text-color);
     background-color: var(--main-bg-color);
 
+    z-index: 999;
     transform: translateX(0);
     transition: transform 500ms var(--timing);
 

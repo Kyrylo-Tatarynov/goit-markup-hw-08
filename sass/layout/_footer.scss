@@ -1,11 +1,15 @@
 
 .footer-page {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
 }
 
 .contact-info {
-    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__logo {
         display: inline-block;
@@ -18,6 +22,7 @@
 
 .address {
     width: 233px;
+    text-align: center;
 
     &__list {
         font-style: normal;
@@ -44,10 +49,10 @@
 .main-icons {
     &__text {
         margin-bottom: 20px;
+        text-align: center;
 
         color: var(--secondary-text-color);
         @include font (700, 14px, 1.14);
-        text-align: left;
         text-transform: uppercase;
     }
 
@@ -78,29 +83,30 @@
 
 
 .footer-form {
-    margin-left: auto;
 
     &__text {
         margin-bottom: 20px;
 
         color: var(--secondary-text-color);
         @include font (700, 14px, 1.14);
-        text-align: left;
+        text-align: center;
         text-transform: uppercase;
     }
 }
 
 .shape {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
 
     &__point {
-        margin-right: 12px;
+        width: 74.58vw;
     }
 
     &__email {
         padding: 10px 16px;
-        width: 358px;
+        width: 100%;
         height: 50px;
 
         color: var(--secondary-text-color);
@@ -117,6 +123,7 @@
     }
 
     &__button {
+        width: 200px;
         display: flex;
         height: 50px;
         justify-content: center;
@@ -132,4 +139,76 @@
 
 }
 
+@media screen and (min-width: 480px) {
+    .shape {
+        &__point {
+            width: 450px;
+        }
+    }
+}
 
+@media screen and (min-width: 768px) {
+    .footer-page {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+
+    .address {
+        
+        &__contact {
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer-page {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+
+    .contact-info {
+        margin-right: 70px;
+        align-items: flex-start;
+    }
+
+    .address {
+
+        &__list {
+            text-align: left;
+        }
+
+        &__contact {
+            justify-content: flex-start;
+        }
+    }
+
+    .main-icons {
+        &__text {
+            text-align: left;
+        }
+    }
+    
+    .footer-form {
+        margin-left: auto;
+
+        &__text {
+            text-align: left;
+        }
+
+    }
+
+    .shape {
+        flex-direction: row;
+        justify-content: center;
+
+        &__point {
+            margin-right: 12px;
+            width: 358px;
+        }
+
+    }
+}
