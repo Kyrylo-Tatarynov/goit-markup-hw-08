@@ -1,11 +1,11 @@
 .contanier {
     padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media screen and (min-width: 480px) {
     .contanier {
-    margin-left: auto;
-    margin-right: auto;
     width: 480px;
     }
 }

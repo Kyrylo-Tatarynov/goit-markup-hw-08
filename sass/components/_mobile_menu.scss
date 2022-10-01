@@ -1,163 +1,191 @@
-@media screen and (max-width: 767px) {
-    .mobile-menu {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        visibility: hidden;
-        opacity: 0;
-        pointer-events: none;
-    
-        @include font(500, 40px, 1.17);
-        letter-spacing: 0.02em;
+.mobile-menu {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+    padding-right: 10px;
+    overflow: scroll;
+
+    @include font(500, 8.3vw, 1.17);
+    letter-spacing: 0.02em;
+    color: var(--tittle-text-color);
+    background-color: var(--main-bg-color);
+    visibility: hidden;
+    opacity: 0;
+
+    transition: opacity 250ms var(--timing), visibility 250ms var(--timing);
+
+    &.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        z-index: 999;
+        }
+
+    &__contanier {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 32px;
+    }
+
+    &__main-info {
+        margin-top: auto;
+    }
+
+    &__page {
+        position: relative;
         color: var(--tittle-text-color);
-        background-color: var(--main-bg-color);
-    
-        transition: opacity 250ms var(--timing), visibility 250ms var(--timing);
-    
-        &.is-open {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
+
+        transition: color 250ms var(--timing);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-text-color);
         }
-    
+
+        &--сurrent-secondary::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+
+            background: var(--accent-text-color);
+            border-radius: 2px;
+            transform: scale(0);
+
+            transition: transform 250ms var(--timing);
+        }
+
+        &:hover::after,
+         &:focus::after {
+            transform: scale(1);
+         }
+    }
+
+    &__contacts {
+        margin-bottom: 64px;
+    }
+
+    &__tel {
+        display: block;
+        font-size: 7.08vw;
+        color: var(--main-text-color);
+
+        transition: color 250ms var(--timing);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-text-color);
+        }
+    }
+
+    &__mail {
+        display: block;
+        font-size: 5vw;
+        line-height: 1.16;
+        color: var(--main-text-color);
+
+        transition: color 250ms var(--timing);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-text-color);
+        }
+    }
+
+    &__main-links {
+        display: flex;
+        justify-content: left;
+        gap: 20px;
+    }
+
+    &__point {
+        position: relative;
+
+        &:not(:first-child)::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            width: 4.58vw;
+            height: 1px;
+            
+            transform: rotate(90deg);
+                
+            background-color: rgba(33, 33, 33, 0.2);
+        }
+    }
+
+    &__link {
+        display: block;
+        font-size: 3.75vw;
+        line-height: 1.22;
+        color: var(--accent-text-color);
+
+        transition: color 250ms var(--timing);
+
+        &:hover,
+        &:focus {
+            color: #1067ae;
+        }
+    }
+}
+
+
+.mobile-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    line-height: 0;
+
+    transition: fill 250ms var(--timing);
+
+    &:focus,
+    &:hover {
+        fill: var(--accent-text-color);
+    }    
+}
+
+@media screen and (min-width: 480px) {
+    .mobile-menu {
+
+        @include font(500, 40px, 1.17);
+
         &__contanier {
-            position: relative;
-            padding-left: 25px;
-            padding-top: 48px;
-            padding-bottom: 48px;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-        }
-    
-        &__item:not(:last-child) {
-            margin-bottom: 32px;
-        }
-    
-        &__main-info {
+            width: 480px;
             margin-top: auto;
-        }
-    
-        &__page {
-            position: relative;
-            color: var(--tittle-text-color);
-    
-            transition: color 250ms var(--timing);
-    
-            &:hover,
-            &:focus {
-                color: var(--accent-text-color);
-            }
-    
-            &--сurrent-secondary::after {
-                position: absolute;
-                content: "";
-                bottom: 0;
-                right: 0;
-                width: 100%;
-                height: 4px;
-    
-                background: var(--accent-text-color);
-                border-radius: 2px;
-                transform: scale(0);
-    
-                transition: transform 250ms var(--timing);
-            }
-    
-            &:hover::after,
-            &:focus::after {
-                transform: scale(1);
-            }
-        }
-    
-        &__contacts {
-            margin-bottom: 64px;
+            margin-right: auto;
         }
     
         &__tel {
-            display: block;
             font-size: 34px;
-            color: var(--main-text-color);
-    
-            transition: color 250ms var(--timing);
-    
-            &:hover,
-            &:focus {
-                color: var(--accent-text-color);
-            }
         }
-    
         &__mail {
-            display: block;
             font-size: 24px;
-            line-height: 1.16;
-            color: var(--main-text-color);
-    
-            transition: color 250ms var(--timing);
-    
-            &:hover,
-            &:focus {
-                color: var(--accent-text-color);
-            }
         }
-    
-        &__main-links {
-            display: flex;
-            justify-content: left;
-            gap: 20px;
-        }
-    
         &__point {
-            position: relative;
-        }
-    
-        &__link {
-            display: block;
-            font-size: 18px;
-            line-height: 1.22;
-            color: var(--accent-text-color);
-    
-            transition: color 250ms var(--timing);
-    
-            &:hover,
-            &:focus {
-                color: #1067ae;
-            }
-    
-            &--after::after {
-                content: '';
-                position: absolute;
-                top: 50%;
+            &:not(:last-child)::after {
                 width: 22px;
-                height: 1px;
-    
-                transform: rotate(90deg);
-    
-                background-color: rgba(33, 33, 33, 0.2);
             }
-    
-    
         }
-    }
-    
-    
-    .mobile-button {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        border: none;
-        background-color: transparent;
-        padding: 0;
-        line-height: 0;
-    
-        transition: fill 250ms var(--timing);
-    
-        &:focus,
-        &:hover {
-            fill: var(--accent-text-color);
+        &__link {
+            font-size: 18px;
         }
+
     }
+
 }
 
 @media screen and (min-width: 768px) {

@@ -23,7 +23,7 @@
                 <li class="navigation-list__item"><a href="#" class="navigation-list__link navigation-list__link--сurrent-secondary">Contacts</a></li>
             </ul>
         </nav>
-        <button class="header-button" type="button" data-menu-open>
+        <button class="header-button js-open-menu" type="button">
             <svg class="header-button__icon" width="40" height="40">
                 <use href="./images/icons.svg#icon-burger"></use>
             </svg>
@@ -46,8 +46,8 @@
                 </a>
             </li>
         </ul>
-        <div class="mobile-menu" data-menu>
-            <div class="contanier mobile-menu__contanier">
+        <div class="mobile-menu js-menu-container is-open" >
+            <div class="mobile-menu__contanier">
                 <ul class="mobile-menu__list-pages">
                     <li class="mobile-menu__item"><a class="mobile-menu__page mobile-menu__page--сurrent-secondary" href="./index.html">Studio</a></li>
                     <li class="mobile-menu__item"><a class="mobile-menu__page mobile-menu__page--сurrent-secondary" href="./portfolio.html">Portfolio</a></li>
@@ -63,13 +63,13 @@
                         </li>
                     </ul>
                     <ul class="mobile-menu__main-links">
-                        <li class="mobile-menu__point"><a class="mobile-menu__link mobile-menu__link--after" href="#">Instagram</a></li>
-                        <li class="mobile-menu__point"><a class="mobile-menu__link mobile-menu__link--after" href="#">Twitter</a></li>
-                        <li class="mobile-menu__point"><a class="mobile-menu__link mobile-menu__link--after" href="#">Facebook</a></li>
+                        <li class="mobile-menu__point"><a class="mobile-menu__link" href="#">Instagram</a></li>
+                        <li class="mobile-menu__point"><a class="mobile-menu__link" href="#">Twitter</a></li>
+                        <li class="mobile-menu__point"><a class="mobile-menu__link" href="#">Facebook</a></li>
                         <li class="mobile-menu__point"><a class="mobile-menu__link" href="#">LinkedIn</a></li>
                     </ul>
                 </div>
-                <button class="mobile-button" type="button" data-menu-close>
+                <button class="mobile-button js-close-menu" type="button" >
                     <svg width="40" height="40">
                         <use href="./images/icons.svg#icon-close"></use>
                     </svg>
@@ -78,7 +78,7 @@
         </div>
     </div>
 </header>
-<main>
+<!-- <main>
     <section class="first-part">
         <div class="first-part__block contanier">
             <h1 class="first-part__title">Effective solutions for your business</h1>
@@ -194,8 +194,8 @@
                 </li>
             </ul>
         </div>
-    </section>
-    <section class="fourth-part section">
+    </section> -->
+    <!-- <section class="fourth-part section">
         <div class="employees contanier">
             <h2 class="employees__title title">Our team</h2>
             <ul class="wokers-list">
@@ -349,7 +349,7 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> -->
     <!-- <section class="fifth-part section">
        <div class="customers contanier">
             <h2 class="customers__title title">Regular customers</h2>
@@ -399,7 +399,7 @@
             </ul>
         </div>
     </section> -->
-</main>
+<!-- </main> -->
 <!-- <footer>
     <div class="contanier footer-page">
         <div class="contact-info">
@@ -463,7 +463,7 @@
          </div>
     </div>
 </footer> -->
-<script src="./js/menu.js"></script>
+<script src="./js/mobile-menu.js"></script>
 <script src="./js/modal.js"></script>
 </body>
 </html>
