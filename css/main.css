@@ -1101,15 +1101,14 @@ footer {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding: 0 20px;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(101%) scaleX(0);
   transition: transform 250ms var(--timing);
 }
 .overlay__text {
-  width: 322px;
-  font-size: 18px;
+  font-size: 3.75vw;
   line-height: 1.55;
   color: var(--secondary-text-color);
 }
@@ -1127,17 +1126,28 @@ footer {
   margin-bottom: 4px;
   color: var(--tittle-text-color);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 3.75vw;
   line-height: 2;
   letter-spacing: 0.06em;
   text-align: left;
 }
 .portfolio-link__text {
   color: var(--main-text-color);
-  font-size: 16px;
+  font-size: 3.33vw;
   line-height: 1.87;
 }
 
+@media screen and (min-width: 480px) {
+  .overlay__text {
+    font-size: 18px;
+  }
+  .portfolio-link__title {
+    font-size: 18px;
+  }
+  .portfolio-link__text {
+    font-size: 16px;
+  }
+}
 @media screen and (min-width: 768px) {
   .portfolio-list {
     flex-wrap: wrap;

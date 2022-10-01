@@ -3,18 +3,12 @@
 }
 
 .portfolio-buttons {
-    // margin-right: auto;
-    // margin-left: auto;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 8px;
     row-gap: 15px;
-
-    // &__item:not(:last-child) {
-    //     margin-right: 8px;
-    // }
 
     &__button {
         padding: 6px 26px;
@@ -65,8 +59,8 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding: 0 20px;
 
     background-color: rgba(33, 150, 243, 0.9);
 
@@ -74,8 +68,7 @@
     transition: transform 250ms var(--timing);
 
     &__text {
-        width: 322px;
-        font-size: 18px;
+        font-size: 3.75vw;
         line-height: 1.55;
         color: var(--secondary-text-color);
     }
@@ -99,15 +92,35 @@
         margin-bottom: 4px;
 
         color: var(--tittle-text-color);
-        @include font (700, 18px, 2);
+        @include font (700, 3.75vw, 2);
         letter-spacing: 0.06em;
         text-align: left;
     }
 
     &__text {
         color: var(--main-text-color);
-        font-size: 16px;
+        font-size: 3.33vw;
         line-height: 1.87;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .overlay {
+
+        &__text {
+            font-size: 18px;
+        }
+    }
+
+    .portfolio-link {
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
     }
 }
 
