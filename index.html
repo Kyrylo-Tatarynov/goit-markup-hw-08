@@ -78,7 +78,7 @@
         </div>
     </div>
 </header>
-<!-- <main>
+<main>
     <section class="first-part">
         <div class="first-part__block contanier">
             <h1 class="first-part__title">Effective solutions for your business</h1>
@@ -181,20 +181,53 @@
             <h2 class="capabilities__title title">What we do</h2>
             <ul class="capabilities__list">
                 <li class="capabilities__item">
-                    <img src="./images/image1.jpg" alt="Coding on a tablet" width="370">
+                    <picture>
+                        <source
+                        srcset="./images/benefits/benefit1.webp 1x, ./images/benefits/benefit1x2.webp 2x"
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                        />
+                        <source 
+                        srcset="./images/benefits/benefit1.jpg 1x, ./images/benefits/benefit1x2.jpg 2x" 
+                        media="(min-width: 1200px)"
+                        />
+                        <img src="./images/benefits/benefit1.jpg" alt="Coding on a tablet" width="370">
+                    </picture>
                     <div class="capabilities__box"><p class="capabilities__text">Desktop apps</p></div>
                 </li>
                 <li class="capabilities__item">
-                    <img src="./images/image2.jpg" alt="Development of an interface for a phone on a laptop" width="370">
+                    <picture>
+                        <source 
+                            srcset="./images/benefits/benefit2.webp 1x, ./images/benefits/benefit2x2.webp 2x" 
+                            media="(min-width: 1200px)"
+                            type="image/webp" 
+                        />
+                        <source 
+                            srcset="./images/benefits/benefit2.jpg 1x, ./images/benefits/benefit2x2.jpg 2x"
+                            media="(min-width: 1200px)" 
+                        />
+                        <img src="./images/benefits/benefit2.jpg" alt="Development of an interface for a phone on a laptop" width="370">
+                    </picture>
                     <div class="capabilities__box"><p class="capabilities__text">Mobile apps</p></div>
                 </li>
                 <li class="capabilities__item">
-                    <img src="./images/image3.jpg" alt="The choice of color is not a tablet" width="370">
+                    <picture>
+                        <source 
+                            srcset="./images/benefits/benefit3.webp 1x, ./images/benefits/benefit3x2.webp 2x" 
+                            media="(min-width: 1200px)"
+                            type="image/webp" 
+                            />
+                        <source 
+                            srcset="./images/benefits/benefit3.jpg 1x, ./images/benefits/benefit3x2.jpg 2x" 
+                            media="(min-width: 1200px)" 
+                            />
+                        <img src="./images/benefits/benefit3.jpg" alt="The choice of color is not a tablet" width="370">
+                    </picture>
                     <div class="capabilities__box"><p class="capabilities__text">Design solutions</p></div>
                 </li>
             </ul>
         </div>
-    </section> -->
+    </section>
     <!-- <section class="fourth-part section">
         <div class="employees contanier">
             <h2 class="employees__title title">Our team</h2>
@@ -399,7 +432,7 @@
             </ul>
         </div>
     </section> -->
-<!-- </main> -->
+</main>
 <!-- <footer>
     <div class="contanier footer-page">
         <div class="contact-info">

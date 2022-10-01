@@ -1,34 +1,30 @@
 .mobile-menu {
     position: fixed;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    padding-left: 40px;
-    padding-right: 10px;
-    overflow: scroll;
 
     @include font(500, 8.3vw, 1.17);
     letter-spacing: 0.02em;
     color: var(--tittle-text-color);
     background-color: var(--main-bg-color);
-    visibility: hidden;
-    opacity: 0;
 
-    transition: opacity 250ms var(--timing), visibility 250ms var(--timing);
+    transform: translateX(0);
+    transition: transform 500ms var(--timing);
 
     &.is-open {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        z-index: 999;
-        }
+        transform:translateX(100%);
+    }
 
     &__contanier {
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 100%;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        padding-left: 40px;
+        padding-right: 10px;
     }
 
     &__item:not(:last-child) {
@@ -162,12 +158,6 @@
     .mobile-menu {
 
         @include font(500, 40px, 1.17);
-
-        &__contanier {
-            width: 480px;
-            margin-top: auto;
-            margin-right: auto;
-        }
     
         &__tel {
             font-size: 34px;
@@ -176,8 +166,10 @@
             font-size: 24px;
         }
         &__point {
-            &:not(:last-child)::after {
+            &:not(:first-child)::before {
                 width: 22px;
+                top: 50%;
+                right: 100%;
             }
         }
         &__link {
@@ -185,7 +177,6 @@
         }
 
     }
-
 }
 
 @media screen and (min-width: 768px) {
