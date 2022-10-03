@@ -151,7 +151,7 @@ footer {
   flex-direction: column;
   height: 100%;
   padding-top: 48px;
-  padding-bottom: 68px;
+  padding-bottom: 78px;
   padding-left: 40px;
   padding-right: 10px;
 }
@@ -792,7 +792,7 @@ footer {
   align-items: center;
 }
 .wokers-list__item {
-  width: 270px;
+  width: 100%;
   background-color: var(--main-bg-color);
   font-size: 16px;
   line-height: 1.18;
@@ -840,11 +840,17 @@ footer {
     justify-content: center;
     gap: 30px;
   }
+  .wokers-list__item {
+    width: 354px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .wokers-list {
     flex-direction: row;
     column-gap: 30px;
+  }
+  .wokers-list__item {
+    width: 270px;
   }
 }
 .customers__title {
