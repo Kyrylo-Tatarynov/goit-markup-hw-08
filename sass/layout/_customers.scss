@@ -9,11 +9,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 30px;
+
+    &__point {
+        width: 35.41vw;
+    }
 
     &__link {
         display: flex;
-        width: 35.41vw;
+        width: 100%;
         height: 92px;
         justify-content: center;
         align-items: center;
@@ -35,7 +39,7 @@
     .customers-list {
         gap: 30px;
 
-        &__link {
+        &__point {
             width: 210px;
         }
     }
@@ -44,7 +48,7 @@
 @media screen and (min-width: 768px) {
     .customers-list {
     
-        &__link {
+        &__point {
                 width: 226px;
             }
     }
@@ -53,7 +57,7 @@
 @media screen and (min-width: 1200px) {
     .customers-list {
 
-        &__link {
+        &__point {
             width: 170px;
         }
     }
